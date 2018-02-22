@@ -55,5 +55,5 @@ task runServer(type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
 }
 
-task stage(dependsOn: ['build', 'clean'])
-build.mustRunAfter clean
+task stage {
+}
