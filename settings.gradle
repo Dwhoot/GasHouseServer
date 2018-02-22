@@ -1,0 +1,4 @@
+rootProject.name = 'GasHouseServer'
+include 'Backend'
+include 'Frontend'
+
