@@ -51,7 +51,10 @@ compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
 
-task stage(type: JavaExec) {
+task run(type: JavaExec) {
     main = 'KtorServerKt'
     classpath = sourceSets.main.runtimeClasspath
 }
+
+task stage(dependsOn: ['build', 'clean'])
+build.mustRunAfter clean
