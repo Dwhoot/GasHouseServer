@@ -5,7 +5,7 @@ import org.slf4j.*
 
 val LOG: Logger = LoggerFactory.getLogger("ktor-app")
 val portArgName = "--server.port"
-val defaultPort = 8080
+val defaultPort = 5000
 
 fun main(args: Array<String>) {
     println("Server Main Called.")
