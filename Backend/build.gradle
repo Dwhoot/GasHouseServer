@@ -3,7 +3,7 @@ buildscript {
     ext.ktor_version = '0.9.1'
 
     repositories {
-//        mavenCentral()
+        mavenCentral()
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
@@ -22,7 +22,6 @@ mainClassName = "KtorServerKt"
 sourceCompatibility = 1.8
 
 repositories {
-    mavenCentral()
     jcenter()
     maven { url "https://dl.bintray.com/kotlin/kotlinx" }
     maven { url "https://dl.bintray.com/kotlin/ktor" }
@@ -35,7 +34,7 @@ dependencies {
     compile "io.ktor:ktor-server-netty:$ktor_version"
 //    compile 'io.ktor:ktor:0.9.1'
     compile group: 'com.google.code.gson', name: 'gson', version: '2.3.1'
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+//    testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 
 kotlin {

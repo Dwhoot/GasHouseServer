@@ -12,10 +12,9 @@ fun main(args: Array<String>) {
     for (strin in args) {
         println("$strin")
     }
-    val portConfigured = args.isNotEmpty() && args[0].startsWith(portArgName)
-    val port = if (portConfigured) {
-        println("Custom port configured: ${args[0]}")
-        args[0].split("=").last().trim().toInt()
+    val energy = System.getenv().get("PORT") as? Int
+    val port = if (energy != null) {
+        energy!!
     } else defaultPort
     embeddedServer(Netty, port, module = Application::main).start(wait = true)
 }
