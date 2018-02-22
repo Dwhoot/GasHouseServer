@@ -21,6 +21,7 @@ fun Application.main() {
         maxAge = Duration.ofDays(1)
     }
 
+    println("Ready For Routing.")
     routing {
         get("/{id}") {
             val id = call.parameters["id"] ?: throw IllegalArgumentException("Parameter id not found")
