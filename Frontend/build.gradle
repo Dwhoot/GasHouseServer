@@ -10,7 +10,7 @@ buildscript {
 }
 
 group 'com.gashouse.first'
-version '0.0.1'
+version 'com.gashouse:gashouse-frontend:0.1'
 
 apply plugin: 'kotlin2js'
 

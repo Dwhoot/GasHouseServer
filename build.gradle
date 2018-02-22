@@ -10,7 +10,7 @@ buildscript {
 }
 
 group 'com.gashouse.first'
-version '0.0.1'
+version 'com.gashouse:gashouse:0.1'
 
 apply plugin: 'java'
 apply plugin: 'kotlin'
@@ -32,3 +32,6 @@ compileKotlin {
 compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
+
+task stage(dependsOn: ['build', 'clean'])
+build.mustRunAfter clean
