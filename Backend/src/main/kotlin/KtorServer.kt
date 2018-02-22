@@ -9,7 +9,9 @@ val defaultPort = 8080
 
 fun main(args: Array<String>) {
     println("Server Main Called.")
-    println("$args")
+    for (strin in args) {
+        println("$strin")
+    }
     val portConfigured = args.isNotEmpty() && args[0].startsWith(portArgName)
     val port = if (portConfigured) {
         println("Custom port configured: ${args[0]}")
